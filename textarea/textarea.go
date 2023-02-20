@@ -252,6 +252,11 @@ func New() Model {
 	return m
 }
 
+// Nothing special happens on initialization. Required to implement tea.Model.
+func (m *Model) Init() tea.Cmd {
+	return nil
+}
+
 // DefaultStyles returns the default styles for focused and blurred states for
 // the textarea.
 func DefaultStyles() (Style, Style) {
